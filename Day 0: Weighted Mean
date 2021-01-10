@@ -1,0 +1,10 @@
+if __name__ == '__main__':
+    n = int(input())
+
+    arr = list(map(float, input().split()))
+    
+    w = list(map(float, input().split()))
+    
+    wa= round(sum([i[0]*i[1] for i in zip(arr,w)])/sum(w),1)
+
+    print(wa)

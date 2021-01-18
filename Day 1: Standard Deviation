@@ -1,0 +1,15 @@
+import statistics as st
+import math
+
+n = int(input())
+arr = list(map(int, input().rstrip().split()))
+
+m = sum(arr)/n
+arr2 = 0.0
+  
+for i in range(n):
+    arr2=arr2+(arr[i]-m)*(arr[i]-m)
+        
+
+
+print(round(math.sqrt(arr2/n),1))

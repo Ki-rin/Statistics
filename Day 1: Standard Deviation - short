@@ -1,0 +1,6 @@
+import statistics as st
+
+n = int(input())
+arr = list(map(int, input().rstrip().split()))
+
+print(round(st.pstdev(arr),1))

@@ -1,0 +1,19 @@
+def ft(num):
+    f = 0
+    if num == 0:
+        return 1
+    else:
+        return ft(num-1)*num
+        
+
+
+arr = list(map(float, input().rstrip().split()))
+
+p = arr[0] / sum(arr)    
+n = 6
+x = 0
+
+for i in [3,4,5,6]:
+    x+=ft(n)/(ft(i)*ft(n-i))*p**i*(1-p)**(n-i)
+
+print(round(x,3))

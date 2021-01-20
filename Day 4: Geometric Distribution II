@@ -1,0 +1,9 @@
+arr = list(map(float, input().rstrip().split()))
+
+n = int(input())
+
+p = arr[0]/arr[1]
+
+answ = 1 - (1-p)**5
+
+print(round(answ,3))

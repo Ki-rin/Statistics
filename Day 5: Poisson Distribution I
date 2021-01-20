@@ -1,3 +1,8 @@
+'''
+A random variable, k , follows Poisson distribution with mean of miu. 
+Find the probability with which the random variable k  is equal to x .
+'''
+
 import math
 
 miu = float(input())

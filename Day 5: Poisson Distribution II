@@ -1,0 +1,7 @@
+x, y  = list(map(float,input().rstrip().split()))
+
+CA = 160 + 40*(x+x**2)
+
+CB = 128 + 40*(y+y**2)
+
+print('%.3f\n%.3f' % (CA,CB))

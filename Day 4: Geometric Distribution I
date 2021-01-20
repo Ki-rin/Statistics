@@ -1,0 +1,11 @@
+arr = list(map(float, input().rstrip().split()))
+p = arr[0] / arr[1]
+
+nsp = int(input())
+
+answ = p
+
+for i in range(nsp-1,0,-1):
+    answ=answ*(1-p) 
+
+print(round(answ,3))

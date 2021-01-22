@@ -1,0 +1,17 @@
+import math
+
+#Cumulative distribution function
+def cdf(x,miu,sigma):
+    return 0.5*(1+math.erf((x-miu)/(sigma*math.sqrt(2))))
+
+mx = float(input())
+n = float(input())
+miu = float(input())*n
+sigma = float(input())*math.sqrt(n)
+
+
+p = cdf(mx,miu,sigma)
+
+
+
+print(round(p,4))

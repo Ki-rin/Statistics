@@ -1,0 +1,26 @@
+import math
+import statistics 
+
+#get Rank function
+def get_rank(X, n):
+    x_rank = dict((x, i+1) for i, x in enumerate(sorted(set(X))))
+    # x_ranks = {x:i+1 for i,x in enumerate(sorted(list(set(data))))}
+    return [x_rank[i] for i in X]
+    
+
+n = int(input())
+
+x = list(map(float,input().split()))
+rx = get_rank(x, n)
+
+y = list(map(float,input().split()))
+ry = get_rank(y, n)
+
+
+# is the difference between ranks of each pair
+d = [(rx[i] -ry[i])**2 for i in range(n)]
+
+#pearman's Rank Correlation Coefficient
+rxy = 1 - (6 * sum(d)) / (n * (n*n - 1))
+
+print('%.3f' % rxy)

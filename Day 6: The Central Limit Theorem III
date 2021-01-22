@@ -1,0 +1,20 @@
+import math
+
+#Cumulative distribution function
+def cdf(x,miu,sigma):
+    return 0.5*(1+math.erf((x-miu)/(sigma*math.sqrt(2))))
+
+
+n = float(input())
+miu = float(input())  *n
+sigma = float(input()) *math.sqrt(n)
+inv = float(input()) # means 1.96 st dev
+z = float(input())
+
+
+A =  miu - z*sigma
+B =  miu + z*sigma
+
+print(round(A/n,2))
+print(round(B/n,2))
+

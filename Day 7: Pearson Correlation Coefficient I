@@ -1,0 +1,26 @@
+import math
+import statistics 
+
+#Cumulative distribution function
+def ro(n,x,y):
+
+    miuX = statistics.mean(x)
+    miuY = statistics.mean(y)
+    sigmaX = statistics.pstdev(x)
+    sigmaY = statistics.pstdev(y)
+    
+    r = []
+    
+    for i in range(n):
+        
+        r.append((x[i]-miuX)*(y[i]-miuY))
+    
+    return sum(r)/(n*sigmaX*sigmaY)
+
+
+n = int(input())
+x = list(map(float,input().split()))
+y = list(map(float,input().split()))
+
+
+print(round(ro(n,x,y),3))
